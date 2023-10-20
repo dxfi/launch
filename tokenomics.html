@@ -140,6 +140,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+body { background-color:#ffffff; color: #fff; }
 #chartdiv {
   width: 100%;
   height: 500px;
@@ -147,9 +148,12 @@
 </style>
 <script src="https://www.amcharts.com/lib/4/core.js"></script>
 <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
 <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
 <div id="chartdiv"></div>
-<script>// Themes begin
+<script>
+// Themes begin
+am4core.useTheme(am4themes_dark);
 am4core.useTheme(am4themes_animated);
 // Themes end
 
@@ -160,33 +164,29 @@ chart.legend = new am4charts.Legend();
 
 chart.data = [
   {
-    country: "Lithuania",
-    litres: 501.9
+    country: "Liquidity",
+    litres: 35.7
   },
   {
-    country: "Czech Republic",
-    litres: 301.9
+    country: "Private",
+    litres: 33.2
   },
   {
-    country: "Ireland",
-    litres: 201.1
+    country: "Public",
+    litres: 18.8
   },
   {
-    country: "Germany",
-    litres: 165.8
+    country: "Reserve",
+    litres: 5.8
   },
   {
-    country: "Australia",
-    litres: 139.9
+    country: "Early Tester",
+    litres: 6.6
   },
   {
-    country: "Austria",
-    litres: 128.3
+    country: "Community",
+    litres: 6.6
   },
-  {
-    country: "UK",
-    litres: 99
-  }
 ];
 
 var series = chart.series.push(new am4charts.PieSeries3D());
