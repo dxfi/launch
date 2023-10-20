@@ -135,6 +135,36 @@
 <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 <div id="chartdiv"></div>
+				<script>/*
+ */
+
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+chart.data = [
+  {
+    country: "Liquidity",
+    value: 17
+  },
+  {
+    country: "Private",
+    value: 10
+  },
+  {
+    country: "Public",
+    value: 28
+  },
+  {
+    country: "Reserve",
+    value: 20
+  },
+  {
+    country: "EarlyTester",
+    value: 12</script>
 				<!-- end chart -->
 			</div>
 		</div>
